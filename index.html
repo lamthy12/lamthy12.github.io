@@ -3,48 +3,463 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lam Vu | Business Analytics</title>
-</head>
 
-<body>
+    <tittle>Thy Lam Vu | CSUF Business Analytics</tittle>
 
-    <h1>Hi, I'm Lam Vu 👋</h1>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    <h2>Business Analytics Student at CSUF</h2>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            backgorund: #fafafa;
+            color: #222;
+            line-height: 1.6;
+        }
 
-    <p>
-        I'm interested in using data to solve business problems
-        and turn information into meaningful insights.
-    </p>
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(250,250,250, 0.95);
+            border-bottom: 1px solid #e8e8e8;
+            padding: 18px 10%;
+        }
 
-    <h2>About Me</h2>
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <p>
-        I am a Business Analytics student at California State University,
-        Fullerton. I am interested in data analysis, problem-solving,
-        and business strategy.
-    </p>
+        .nav-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    <h2>Projects</h2>
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-    <h3>Sales Performance Analysis</h3>
-    <p>Excel · SQL · Power BI</p>
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            
+        .nav a {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+        }
 
-    <h3>Bank Customer Analysis</h3>
-    <p>SQL</p>
+        nav a:hover {
+            color: #777;
+        }
 
-    <h3>Flight Delay Analysis</h3>
-    <p>Python · Logistic Regression</p>
+        /* GENERAL */
+            .container {
+                max-width: 1100px;
+                margin: auto;
+                padding: 0 30px;
+            }
 
-    <h2>Skills</h2>
+            section { 
+                padding: 90px 0;
+            }
 
-    <p>SQL · Excel · Power BI · Data Analysis · Business Analysis</p>
+            .section-title {
+                font-sizes: 30px;
+                margin-bottom: 35px;
+            }
 
-    <h2>Contact</h2>
+            /* HERO */
+            .hero {
+                min-height: 88vh;
+                display: flex;
+                align-items: center;
+            }
 
-    <p>
-        <a href="https://github.com/lamthy12">GitHub</a>
-    </p>
+            .hero-content {
+                max-width: 750px;
+            }
 
+            .small-title {
+                font-size: 15px;
+                color: #777;
+                margin-bottom: 15px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 8vw, 82px);
+                line-height: 1.05;
+                margin-bottom: 20px;
+            }
+
+            /hero h2 {
+                font-size: clamp(22px, 4vw, 34px);
+                font-weight: 500;
+                margin-bottom: 20px;
+            }
+
+            .hero p { 
+                max-width: 620px;
+                color: #666;
+                font-size: 17px;
+                margin-bottom: 30px;
+            }
+
+            .buttons {
+                display: flex:
+                gap: 14px;
+                flex-wrap: wrap;
+        }
+
+        .button { 
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap:
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #222;
+            transition: 0.2s;
+        }
+        .button.primary {
+            background: #222;
+            color: white;
+        }
+        .button.secondary {
+            color: #222;
+        }
+        .button.hover {
+            transform: translateY (-2px);
+            opacity: 0.8;
+        }
+        /* ABOUT */
+        .about-text {
+            max-width: 750px;
+            color: #555;
+            font-size: 17px;
+        }
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+        .project-card {
+            background: beige;
+            border: 1px solid #e5e5e5;
+            border-radius: 14px;
+            padding: 28px;
+            transition: 0.25s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        }
+        .project-card h3 {
+            margin-bottom: 10px;
+            font-size: 21px;
+        }
+        .project-card p {
+            color: #200;
+            margin-bottom: 15px;
+        }
+        .tags {
+            font-size: 13px;
+            color: #220;
+            margin-bottom: 20px;
+        }
+        .project-link {
+            text-decoration: none;
+            color: #158;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        /* SKILLS */
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skill {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 10px 17px;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+        /* EXPERIENCE */
+        .experience-item {
+            border-left: 2px solid #ddd;
+            padding-left: 25px;
+            margin-bottom: 35px;
+        }
+        .experience-item h3 {
+            margin-bottom: 5px;
+        }
+        .experience-item .date {
+            color: #152;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .experience-item p {
+            color: #242;
+        }
+        /* CERTIFICATIONS */
+        .certifications {
+            display: grid;
+            gap: 15px;
+        }
+        .cert {
+            backgroudn: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .cert a {
+            color: #222;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .cert a:hover {
+            text-decoration: underline;
+        }
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            background: #f2f2f2;
+            border-radius: 20px;
+            padding: 60px 30px;
+        }
+        .contact p {
+            color: #666;
+            margin: 15px auto 25px;
+        }
+        .contact-links a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 35px;
+            color: #22466;
+            font-size: 13px;
+        }
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            nav {
+                padding: 15px 20px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            mav a {
+                font-size: 12px;
+            }
+            section {
+                padding: 65px 0;
+            }
+            .hero {
+                min-height: 80vh;
+            }
+            .hero h1 {
+                font-size: 50px'
+            }
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 20px;
+            }
+
+        }
+    </style>
+</head> 
+</body>
+
+     <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Thy Lam Vu</div>
+
+            <ul> 
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a>a></li>
+                <li><a href="skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="small-title">
+                    Business Analytics Student at CSUF
+                </div>
+                <h1>Lam Vu Portfolio. </h1>
+                <h2>Exploring data into meaningful business insights. </h2>
+                <p>I am Lam Vu, a sophomore at California State University, Fullerton and currently majoring Business Analytocs. I use analytics tool to analyze data, collaborate and communicate valuable business strategy.
+                </p>
+                <div class="buttons">
+                    <a class="button primary" href="#projects">
+                        View Projects
+                    </a>
+                    <a class="button secondary" href="#contact">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="about-text">
+                I am a Business Analytics student at CSUF. I enjoy working with data to understand business problems and find practical solutions. I am particularly interested in Business Analytics, the maim goal is to understand the question, deliver accurate information and continue to learn in analyzing data.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card">
+                <h3>Flight Delay Analysis</h3>
+                <p> Analyzed delayed versus on-time flights to identify factors associated with flight delays, performance patterns and business insights.
+                </p>
+                <div class="tags">
+                    Excel , AI Studio, Visualization
+                </div>
+                <a class="project-card">
+                    <h3>Hospital Data Analysis</h3>
+                    <p>Collected pharmaceutical's company data using Excel PivotTables to identify operational trends, summarize findings and present insights. 
+                    </p>
+                    <div class="tags">
+                        Excel , PowerPoint , Data Analysis
+                    </div>
+                    <a class="project-link" href="#">
+                        View Proẹct ->
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills">
+                <span class="skill">Excel</span>
+                <span class="skill">SQL</span>
+                <span class="skill">Data Analysis</span>
+                <span class="skill">Business Analysis</span>
+                <span class="skill">Microsoft Office Specialist</span>
+                <span class="skill">Power BI</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="container">
+
+            <h2 class="section-title">Experience</h2>
+
+            <div class="experience-item">
+                <h3>Internship</h3>
+
+                <div class="date">
+                    APAC Pharmaceutical Joint Stock Co. Summer 2024
+                </div>
+                <p>
+                    Conducted market research and analyzed medicine supply data from distribution by using Excel. Prepared weekly presentations and reports to find  trends across different markets.
+                </p>
+            </div>
+
+            <div class="experience-item">
+                <h3> Marketing Associate</h3>
+
+                <div class="date">
+                    Studio 230 ~ Aug 2024 - Jun 2025
+                </div>
+
+                <p> Managed social media channel for Studio 230 on Instagram to keep updating brand's information, products and promotions for college students. Comducted customer research, analyzed survey responses and do sale activities for custom hat project.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p> I am always open to connecting and exploring opportunities in Business Analytics
+            </p>
+            <div class="contact-links">
+                <a href="https://github.com/lamthy12" target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#" target="_blank">
+                    LinkedIn
+                </a>
+               
+                <a href="mailto:lamthy@csu.fullerton.edu">
+                    Email
+                </a>
+
+                <a href="tel:+16576261372">
+                    Phone
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        2026 Lam Vu - Business Analytics
+    </footer>
 </body>
 </html>
+    
+
+                
+            
