@@ -6,7 +6,7 @@ This project primarily focuses on evaluating data quality, catogorizing customer
 
 ---
 
-## Project Probelms
+## 1. Project Problems
 
 Before analyzing the effectiveness of a marketing campaign, it is important to understand whether the underlying customer data is reliable and consistent.
 
@@ -18,7 +18,7 @@ This project focuses on three main questions:
 
 ---
 
-## Dataset
+## 2. Dataset
 
 **Source:** [UCI Machine Learning Repository – Bank Marketing]
 (https://archive.ics.uci.edu/dataset/222/bank+marketing)
@@ -33,25 +33,33 @@ This project focuses on three main questions:
 | Database | MySQL |
 | Target Variable | `y` (Term Deposit Subscription) |
 
-This analysis includes customer information such as age, job, marital status, education, account balance, housing loans, personal loans, and previous marketing campaign outcomes:
+- Variables Table in BankMarketing_Dataset includes:
 
-Customer Demographics: Age, Job, Marital Status, Education
-
-Financial Information: Credit Default, Account Balance, Housing Loan, Personal Loan
-
-Campaign Information: Contact Type, Contact Day, Contact Month, Call Duration, Number of Campaign Contacts
-
-Previous Campaign History: Days Since Previous Contact, Previous Contacts, Previous Campaign Outcome
-
-Target Variable: Term Deposit Subscription (y)
+Age
+Job 
+Marital Status
+Education
+Credit Default
+Balance
+Housing Loan 
+Personal Loan
+Contact
+Day_of_week
+Month
+Duration
+Campaign
+Pdays
+Previous 
+Poutcome
+(y) Term Deposit Subscription
 
 ---
 
-## Tools & SQL Skills
+## 3. Tools & SQL Skills
 
 **Tools:** MySQL Workbench, Tableau, Visualization
 
-**SQL Techniques:**
+**What SQL Techniques I used?:**
 - Data profiling using `COUNT()`, `DISTINCT`, `MIN()` and `MAX()`
 - Conditional logic using `CASE WHEN`
 - Data transformation using `ALTER TABLE` and `UPDATE`
@@ -59,9 +67,9 @@ Target Variable: Term Deposit Subscription (y)
 
 ---
 
-## Data Preparation Process
+## 4. Data Preparation Process
 
-### 1. Data Quality Assessment
+### a. Data Quality Assessment
 
 Examined the original dataset to identify potential data quality issues.
 
@@ -79,7 +87,7 @@ Examined the original dataset to identify potential data quality issues.
 
 Negative balances and other unusual values were retained because they were not confirmed to be data errors.
 
-### 2. Subscription Status Standardization
+### b. Subscription Status Standardization
 
 Created a separate table, `bank_marketing_clean`, to preserve the original dataset.
 
@@ -90,13 +98,13 @@ Added a new `subscription_status` column to make the subscription outcome easier
 | yes | Subscribed |
 | no | Not Subscribed |
 
-### 3. Customer Age Segmentation
+### c. Customer Age Segmentation
 
 Created an `age_group` column using SQL `CASE WHEN` statements.
 
 Customers were classified into five age categories: 18–29, 30–39, 40–49, 50–59, and 60+.
 
-### 4. Final Data Validation
+### d. Final Data Validation
 
 Verified the resulting dataset to confirm that:
 
@@ -106,7 +114,7 @@ Verified the resulting dataset to confirm that:
 
 ---
 
-## Key Findings
+## 5. Key Findings
 
 <text>**Subscription outcomes**</text>
 
@@ -136,13 +144,18 @@ These findings describe the overall dataset and do not establish which customer 
 
 ## Project Files
 
-- `bank_marketing_cleaning.sql` — SQL script covering data quality checks, subscription standardization, age segmentation, and final validation.
-- `bank-full.csv` — Original Bank Marketing dataset.
+- `bank_marketing_cleaning.sql` 
+- `bank-full.csv` 
+- `tableau.pdf` 
 
 ---
 
-## Project Outcome
+## What I learned
 
-This project demonstrates foundational SQL skills in examining data quality, applying conditional transformations, preserving original records, and validating a prepared dataset.
 
-The resulting data structure supports future analysis of customer characteristics and term deposit subscriptions.
+---
+
+## Conclusion
+
+This project demonstrates foundational SQL skills in examining data quality, applying conditional transformations, preserving original records, and validating a prepared dataset. The resulting data structure supports future analysis of customer characteristics and term deposit subscriptions.
+
