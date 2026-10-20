@@ -114,6 +114,11 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) { nav { background: #e8eef3; } .hero-card { background: #f0f6fb; } }
 
+    
+.project-placeholder { width: 100%; aspect-ratio: 1182 / 572; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border-radius: 11px; margin-bottom: 25px; border: 1px dashed #b3c9db; background: linear-gradient(135deg, #e5edf5, #dae6f0); color: #637f98; font-size: 12px; letter-spacing: .5px; }
+.project-placeholder-mark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #b8cede; border-radius: 12px; color: #7394b1; font-size: 28px; font-weight: 300; line-height: 1; background: rgba(245,249,252,.5); }
+.project-card-upcoming:hover { transform: none; border-color: #c8d8e5; box-shadow: 0 8px 24px rgba(42,74,103,.045); }
+
     </style>
 </head>
 
@@ -306,6 +311,17 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
                     </div>
 
                 </a>
+
+            
+                <!-- Project 3: replace this card's title and description with your next project. -->
+                <article class="project-card project-card-upcoming">
+                    <div class="project-placeholder" aria-hidden="true">
+                        <span class="project-placeholder-mark">+</span>
+                        <span>Coming soon</span>
+                    </div>
+                    <h3>New Project</h3>
+                    <p>More project details will be added soon.</p>
+                </article>
 
             </div>
 
