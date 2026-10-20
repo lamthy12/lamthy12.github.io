@@ -119,6 +119,16 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
 .project-placeholder-mark { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid #b8cede; border-radius: 12px; color: #7394b1; font-size: 28px; font-weight: 300; line-height: 1; background: rgba(245,249,252,.5); }
 .project-card-upcoming:hover { transform: none; border-color: #c8d8e5; box-shadow: 0 8px 24px rgba(42,74,103,.045); }
 
+    
+.powerbi-image { object-fit: contain; background: #e8eef3; }
+    
+/* Larger campus photo with no caption. */
+.hero-card { padding: 8px; overflow: hidden; }
+.hero-card-top { width: 100%; height: auto; aspect-ratio: 3 / 2; margin-bottom: 0; border-radius: 13px; }
+.hero-card-top img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (min-width: 951px) { .hero-content { grid-template-columns: 1.15fr 1fr; gap: 54px; } }
+@media (max-width: 950px) { .hero-card { padding: 8px; } }
+
     </style>
 </head>
 
@@ -197,12 +207,10 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
                 <div class="hero-card">
 
                     <div class="hero-card-top">
-                        <img src="csuf logo.jpg" alt="California State University, Fullerton campus sign" width="2048" height="1366">
+                        <img src="images/csuf%20logo.jpg" alt="California State University, Fullerton campus sign" width="2048" height="1366">
                     </div>
 
-                    <h3>
-                        Business Analytics
-                    </h3>
+                    
 
                 </div>
 
@@ -269,8 +277,36 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
 
             <div class="projects-grid">
 
-                <!-- Project 1 -->
+                <!-- Project 1: Bank Marketing -->
+                <a class="project-card" href="https://github.com/lamthy12/Bank-Project/blob/main/README.md">
 
+                    <img class="project-image" src="images/bank-project.png" alt="A person putting a coin into a glass savings jar" width="768" height="511">
+                    <h3>Bank Marketing Data Cleaning in SQL</h3>
+
+                    <p>Cleaned and performed bank marketing data in MySQL, checked data quality, and created Tableau dashboard for an overall customers' subscriptions performance.</p>
+
+                    <div class="tags">
+                        <span class="tag">SQL</span>
+                        <span class="tag">Tableau</span>
+                        <span class="tag">Visualization</span>
+                    
+                    </div>
+
+                </a>
+
+                <!-- Project 2: Power BI -->
+                <a class="project-card" href="https://github.com/lamthy12/PowerBI_ProjectHealth/blob/main/README.md">
+                    <img class="project-image powerbi-image" src="images/ProjectHealthMgmt_Dashboard_Lam26.png" alt="Project Health Dashboard showing project KPIs, locations, status, budgets, and expenses" width="961" height="759">
+                    <h3>Project Health Dashboard | Power BI</h3>
+                    <p>Built a Power BI dashboard to track project progress, budgets, expenses, and priorities, using KPI cards and interactive visuals to support project monitoring.</p>
+                    <div class="tags">
+                        <span class="tag">Power BI</span>
+                        <span class="tag">Power Query</span>
+                        <span class="tag">Visualization</span>
+                    </div>
+                </a>
+
+                <!-- Project 3: Flight Delay -->
                 <a class="project-card" href="https://github.com/lamthy12/FlightDelayAnalysis/blob/main/README.md">
 
                     <img class="project-image flight-image" src="images/flight-delay.png" alt="Analysis Flight Delays project cover with an airplane and clouds" width="1182" height="572">
@@ -292,36 +328,6 @@ footer { background: #1a3045; color: #a8bdcf; border-top: 1px solid #3b5369; pad
                     </div>
 
                 </a>
-
-
-                <!-- Project 2 -->
-
-                <a class="project-card" href="https://github.com/lamthy12/Bank-Project/blob/main/README.md">
-
-                    <img class="project-image" src="images/bank-project.png" alt="A person putting a coin into a glass savings jar" width="768" height="511">
-                    <h3>Bank Marketing Data Cleaning in SQL</h3>
-
-                    <p>Cleaned and performed bank marketing data in MySQL, checked data quality, and created Tableau dashboard for an overall customers' subscriptions performance.</p>
-
-                    <div class="tags">
-                        <span class="tag">SQL</span>
-                        <span class="tag">Tableau</span>
-                        <span class="tag">Visualization</span>
-                    
-                    </div>
-
-                </a>
-
-            
-                <!-- Project 3: replace this card's title and description with your next project. -->
-                <article class="project-card project-card-upcoming">
-                    <div class="project-placeholder" aria-hidden="true">
-                        <span class="project-placeholder-mark">+</span>
-                        <span>Coming soon</span>
-                    </div>
-                    <h3>New Project</h3>
-                    <p>More project details will be added soon.</p>
-                </article>
 
             </div>
 
